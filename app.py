@@ -14,6 +14,9 @@ from graphs import make_plot
 
 app = dash.Dash(__name__,external_stylesheets=[dbc.themes.BOOTSTRAP])
 
+# add this for heroku
+app.server
+
 # Chart
 fig = make_subplots(rows=1, cols=1)
 fig.add_trace(
@@ -109,7 +112,6 @@ def update_chart(currency_value,start_date,end_date,nbr):
 
     return 'Gaussian Mixtures for ' + currency_value + \
            ' (' + str(nbr) + ' Mixtures) ' + start_date.strftime('%Y-%m-%d') + '->' + end_date.strftime('%Y-%m-%d') , fig
-
 
 
 if __name__ == '__main__':
