@@ -72,6 +72,7 @@ def make_plot(param):
 
 
     fig.update_layout(margin=dict(l=1, r=1, t=1, b=1),
+                      width=800,
                       title_text=param['currency'])
 
     return fig

@@ -39,10 +39,10 @@ dropdown = dcc.Dropdown(
 input_groups = dbc.Row(dbc.Col(
     html.Div([
     dbc.InputGroup([
-        dbc.InputGroupAddon("Start Date", addon_type="prepend"),
+        dbc.InputGroupAddon("T0", addon_type="prepend"),
         dbc.Input(id='id_start_date',value="2020-01-01", type="text")],),
     dbc.InputGroup([
-        dbc.InputGroupAddon("End Date", addon_type="prepend"),
+        dbc.InputGroupAddon("T1", addon_type="prepend"),
         dbc.Input(id='id_end_date',value="2021-01-01",type="text")]),
     dbc.InputGroup([
         dbc.InputGroupAddon("Nbr Mixtures",addon_type="prepend"),
