@@ -15,7 +15,7 @@ from graphs import make_plot
 app = dash.Dash(__name__,external_stylesheets=[dbc.themes.BOOTSTRAP])
 
 # add this for heroku
-app.server
+server = app.server
 
 # Chart
 fig = make_subplots(rows=1, cols=1)
