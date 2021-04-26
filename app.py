@@ -12,7 +12,8 @@ import pandas as pd
 
 from graphs import make_plot
 
-app = dash.Dash(__name__,external_stylesheets=[dbc.themes.BOOTSTRAP])
+
+app = dash.Dash(__name__,title='MDA',external_stylesheets=[dbc.themes.BOOTSTRAP])
 
 # add this for heroku
 server = app.server

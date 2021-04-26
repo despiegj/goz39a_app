@@ -10,7 +10,7 @@ import plotly.graph_objects as go
 import numpy as np
 import pandas as pd
 
-app = dash.Dash(__name__,external_stylesheets=[dbc.themes.BOOTSTRAP])
+app = dash.Dash(__name__,title='MDA',external_stylesheets=[dbc.themes.BOOTSTRAP])
 
 # Chart
 fig = make_subplots(rows=1, cols=1)
