@@ -6,7 +6,7 @@ import plotly.graph_objects as go
 import numpy as np
 
 
-app = dash.Dash(__name__)
+app = dash.Dash(__name__,title='MDA')
 
 fig = make_subplots(rows=1, cols=1)
 fig.add_trace(
