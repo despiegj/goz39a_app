@@ -2,7 +2,6 @@ import dash
 import dash_html_components as html
 import dash_core_components as dcc
 import dash_bootstrap_components as dbc
-
 from plotly.subplots import make_subplots
 import plotly.graph_objects as go
 import numpy as np
@@ -21,9 +20,9 @@ fig.update_layout(width=1500)
 # Currency Options
 dropdown = dcc.Dropdown(
     id='id_currency',
-    options=[{"label":'Swiss Franc (CHF)','value':'CHF'},
-             {"label":'Pound Sterling (GBP)','value':'GBP'},
-             {"label":'Swedish Krone (SEK)','value':'SEK'},
+    options=[{"label":'CHF','value':'CHF'},
+             {"label":'GBP','value':'GBP'},
+             {"label":'SEK','value':'SEK'},
              ],
     value='CHF')
 
@@ -35,8 +34,8 @@ app.layout = dbc.Container(
         html.Hr(),
         dbc.Row(
             [
-                dbc.Col(dropdown, md=4),
-                dbc.Col(dcc.Graph(id="id_graph",figure=fig), md=8),
+                dbc.Col(dropdown, md=2),
+                dbc.Col(dcc.Graph(id="id_graph",figure=fig), md=10),
             ],
             align="center",
         ),

@@ -24,9 +24,9 @@ fig.update_layout(width=1500)
 # Currency Options
 dropdown = dcc.Dropdown(
     id='id_currency',
-    options=[{"label":'Swiss Franc (CHF)','value':'CHF'},
-             {"label":'Pound Sterling (GBP)','value':'GBP'},
-             {"label":'Swedish Krone (SEK)','value':'SEK'},
+    options=[{"label":'CHF','value':'CHF'},
+             {"label":'GBP','value':'GBP'},
+             {"label":'SEK','value':'SEK'},
              ],
     value='CHF')
 
@@ -44,7 +44,7 @@ input_groups = dbc.Row(dbc.Col(
         dbc.Input(id='id_nbr_mixtures',value=3,type='number')],className="mb-3"),
 
     dropdown]
-),md=4))
+)))
 
 
 app.layout = dbc.Container(
@@ -56,8 +56,8 @@ app.layout = dbc.Container(
         html.Hr(),
         dbc.Row(
             [
-                dbc.Col(input_groups, md=5),
-                dbc.Col(dcc.Graph(id="id_graph",figure=fig), md=7),
+                dbc.Col(input_groups, md=2),
+                dbc.Col(dcc.Graph(id="id_graph",figure=fig), md=10),
             ],
             align="center",
         ),
@@ -80,11 +80,6 @@ def update_chart(currency_value,start_date,end_date,nbr):
     except:
         return 'Error in Input'
 
-    if start_date is None:
-        return ''
-
-    if end_date is None:
-        return ''
 
     if nbr is None:
         nbr = 3

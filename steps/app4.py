@@ -22,9 +22,9 @@ fig.update_layout(width=1500)
 # Currency Options
 dropdown = dcc.Dropdown(
     id='id_currency',
-    options=[{"label":'Swiss Franc (CHF)','value':'CHF'},
-             {"label":'Pound Sterling (GBP)','value':'GBP'},
-             {"label":'Swedish Krone (SEK)','value':'SEK'},
+    options=[{"label":'CHF','value':'CHF'},
+             {"label":'GBP','value':'GBP'},
+             {"label":'SEK','value':'SEK'},
              ],
     value='CHF')
 
@@ -32,16 +32,16 @@ dropdown = dcc.Dropdown(
 input_groups = dbc.Row(dbc.Col(
     html.Div([
     dbc.InputGroup([
-        dbc.InputGroupAddon("Start Date", addon_type="prepend"),
+        dbc.InputGroupAddon("T0", addon_type="prepend"),
         dbc.Input(value="2020-01-01")],className="mb-3",),
     dbc.InputGroup([
-        dbc.InputGroupAddon("End Date", addon_type="prepend"),
+        dbc.InputGroupAddon("T1", addon_type="prepend"),
         dbc.Input(value="2021-01-01")],className="mb-3",),
     dbc.InputGroup([
         dbc.InputGroupAddon("Nbr Mixtures",addon_type="prepend"),
         dbc.Input(value=3,type='number')],className="mb-3"),
     dropdown]
-),md=4))
+)))
 
 
 app.layout = dbc.Container(
@@ -52,8 +52,8 @@ app.layout = dbc.Container(
         html.Hr(),
         dbc.Row(
             [
-                dbc.Col(input_groups, md=5),
-                dbc.Col(dcc.Graph(id="id_graph",figure=fig), md=7),
+                dbc.Col(input_groups, md=2),
+                dbc.Col(dcc.Graph(id="id_graph",figure=fig), md=10),
             ],
             align="center",
         ),

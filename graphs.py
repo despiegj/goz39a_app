@@ -71,9 +71,7 @@ def make_plot(param):
         fig.add_trace(density_plot,row=1,col=2)
 
 
-    fig.update_layout(margin=dict(l=1, r=1, t=1, b=1),
-                      width=800,
-                      title_text=param['currency'])
+    fig.update_layout(margin=dict(l=1, r=1, t=1, b=1))
 
     return fig
 
