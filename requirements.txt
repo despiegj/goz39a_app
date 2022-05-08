@@ -81,7 +81,6 @@ neo4j-driver==4.4.3
 neo4jrestclient==2.1.1
 nest-asyncio==1.5.4
 newspaper3k==0.2.8
-nltk==3.7
 notebook==6.4.8
 numpy==1.22.2
 openpyxl==3.0.9
@@ -121,7 +120,6 @@ regex==2022.3.15
 requests==2.27.1
 requests-file==1.5.1
 scikit-learn==1.0.2
-scipy==1.8.0
 seaborn==0.11.2
 Send2Trash==1.8.0
 sgmllib3k==1.0.0
