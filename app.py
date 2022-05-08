@@ -1,6 +1,8 @@
 import dash
-import dash_html_components as html
-import dash_core_components as dcc
+#import dash_html_components as html
+from dash import html
+#import dash_core_components as dcc
+from dash import dcc
 import dash_bootstrap_components as dbc
 from dash.dependencies import Input, Output
 
@@ -13,7 +15,7 @@ import pandas as pd
 from graphs import make_plot
 
 
-app = dash.Dash(__name__,title='MDA',external_stylesheets=[dbc.themes.BOOTSTRAP])
+app = dash.Dash(__name__,title='MDA Class 2022',external_stylesheets=[dbc.themes.BOOTSTRAP])
 
 # add this for heroku
 server = app.server
@@ -40,13 +42,10 @@ dropdown = dcc.Dropdown(
 input_groups = dbc.Row(dbc.Col(
     html.Div([
     dbc.InputGroup([
-        dbc.InputGroupAddon("T0", addon_type="prepend"),
         dbc.Input(id='id_start_date',value="2020-01-01", type="text")],),
     dbc.InputGroup([
-        dbc.InputGroupAddon("T1", addon_type="prepend"),
         dbc.Input(id='id_end_date',value="2021-01-01",type="text")]),
     dbc.InputGroup([
-        dbc.InputGroupAddon("Nbr Mixtures",addon_type="prepend"),
         dbc.Input(id='id_nbr_mixtures',value=3,type='number')]),
 
     dropdown]
