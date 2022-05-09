@@ -1,6 +1,6 @@
 import dash
-import dash_html_components as html
-import dash_core_components as dcc
+from dash import html
+from dash import dcc
 import dash_bootstrap_components as dbc
 
 from plotly.subplots import make_subplots
@@ -32,13 +32,10 @@ dropdown = dcc.Dropdown(
 input_groups = dbc.Row(dbc.Col(
     html.Div([
     dbc.InputGroup([
-        dbc.InputGroupAddon("T0", addon_type="prepend"),
         dbc.Input(value="2020-01-01")],className="mb-3",),
     dbc.InputGroup([
-        dbc.InputGroupAddon("T1", addon_type="prepend"),
         dbc.Input(value="2021-01-01")],className="mb-3",),
     dbc.InputGroup([
-        dbc.InputGroupAddon("Nbr Mixtures",addon_type="prepend"),
         dbc.Input(value=3,type='number')],className="mb-3"),
     dropdown]
 )))

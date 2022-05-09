@@ -1,6 +1,6 @@
 import dash
-import dash_html_components as html
-import dash_core_components as dcc
+from dash import html
+from dash import dcc
 import dash_bootstrap_components as dbc
 from dash.dependencies import Input, Output
 
@@ -34,13 +34,10 @@ dropdown = dcc.Dropdown(
 input_groups = dbc.Row(dbc.Col(
     html.Div([
     dbc.InputGroup([
-        dbc.InputGroupAddon("Start Date", addon_type="prepend"),
         dbc.Input(id='id_start_date',value="2020-01-01", type="text")],className="mb-3",),
     dbc.InputGroup([
-        dbc.InputGroupAddon("End Date", addon_type="prepend"),
         dbc.Input(id='id_end_date',value="2021-01-01",type="text")],className="mb-3",),
     dbc.InputGroup([
-        dbc.InputGroupAddon("Nbr Mixtures",addon_type="prepend"),
         dbc.Input(id='id_nbr_mixtures',value=3,type='number')],className="mb-3"),
 
     dropdown]
@@ -78,6 +75,7 @@ def update_chart(currency_value,start_date,end_date,nbr):
         start_date = pd.to_datetime(start_date)
         end_date = pd.to_datetime(end_date)
     except:
+
         return 'Error in Input'
 
 
