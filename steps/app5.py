@@ -67,7 +67,7 @@ app.layout = dbc.Container(
      ]
 )
 def update_chart(input_value):
-    return 'Gaussian Mixtures for ' + input_value
+    return 'Gaussian Mixtures for : ' + input_value + ' (pure demo)'
 
 
 
