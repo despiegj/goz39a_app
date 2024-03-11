@@ -40,7 +40,7 @@ input_groups = dbc.Row(dbc.Col(
     dbc.InputGroup([
         dbc.Input(id='id_nbr_mixtures',value=3,type='number')],className="mb-3"),
 
-    dropdown]e
+    dropdown]
 )))
 
 
