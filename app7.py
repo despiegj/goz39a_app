@@ -12,7 +12,7 @@ import pandas as pd
 
 from graphs import make_plot
 
-app = dash.Dash(__name__,title='MDA Class 2023',external_stylesheets=[dbc.themes.BOOTSTRAP],serve_locally = False)
+app = dash.Dash(__name__,title='MDA Class 2024',external_stylesheets=[dbc.themes.BOOTSTRAP],serve_locally = False)
 
 # Chart
 fig = make_subplots(rows=1, cols=1)
